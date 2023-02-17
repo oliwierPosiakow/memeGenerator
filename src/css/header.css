@@ -1,0 +1,25 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #D77126, #D5B339);
+  padding: 1em 1.5em;
+  color: white;
+}
+nav .nav--left {
+  display: flex;
+  align-items: center;
+}
+nav .nav--left img {
+  min-width: 30px;
+  width: 18%;
+  margin-right: 1em;
+}
+nav .nav--left h1 {
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: -1px;
+}
+nav .nav--right {
+  font-weight: 500;
+}/*# sourceMappingURL=header.css.map */

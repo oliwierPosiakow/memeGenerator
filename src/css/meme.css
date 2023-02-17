@@ -1,0 +1,35 @@
+.meme--wrapper {
+  width: 100%;
+}
+.meme--wrapper form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2em 2.5em;
+}
+.meme--wrapper form .form--input--wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.meme--wrapper form .form--input--wrapper input {
+  width: 40%;
+  border: 2px solid #D5D4D8;
+  border-radius: 5px;
+  padding: 0.8em;
+}
+.meme--wrapper form input[type=submit] {
+  font-family: inherit;
+  margin-top: 2em;
+  width: 100%;
+  padding: 1em;
+  color: white;
+  background: linear-gradient(90deg, #D77126, #D5B339);
+  border: none;
+  border-radius: 5px;
+  letter-spacing: 0.1em;
+  font-weight: 400;
+  cursor: pointer;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
+}/*# sourceMappingURL=meme.css.map */
