@@ -1,6 +1,6 @@
 .meme--wrapper{
     width: 100%;
-    form{
+    .form{
         
         display: flex;
         justify-content: center;
@@ -12,13 +12,14 @@
             display: flex;
             justify-content: space-between;
             input{
+                font-family: inherit;
                 width: 40%;
                 border: 2px solid #D5D4D8;
                 border-radius: 5px;
                 padding: .8em;
             };
         }
-        input[type=submit]{
+        button{
             font-family: inherit;
             margin-top: 2em;
             width: 100%;
