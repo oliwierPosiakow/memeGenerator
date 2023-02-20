@@ -33,4 +33,10 @@
   font-weight: 400;
   cursor: pointer;
   box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
+}
+.meme--wrapper .meme--img {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 2em;
+  max-width: 80%;
 }/*# sourceMappingURL=meme.css.map */
