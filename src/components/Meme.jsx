@@ -9,15 +9,16 @@ export default function Meme(){
         topText: "",
         bottomText: "",
         randomImg: "http://i.imgflip.com/1bij.jpg",
-        link: ''
+        link: '',
+        checkbox: false
     })
 
     function handleText(event){
-        const {value, name} = event.target
+        const {value, name, type, checked} = event.target
         setMeme(prevMeme => {
             return ({
                 ...prevMeme,
-                [name]: value
+                [name]: type === "checkbox" ? checked : value
             })
         })
     }
@@ -38,32 +39,49 @@ export default function Meme(){
         <div className="meme--wrapper">
             <div className='form'>
                 <div className="form--input--wrapper">
-                    <input 
-                        type="text" 
-                        placeholder='Top text'
-                        onChange={handleText} 
-                        name='topText' 
-                        value={meme.topText}
-                    />
-                    <input 
-                        type="text" 
-                        placeholder='Bottom text'
-                        onChange={handleText} 
-                        name='bottomText' 
-                        value={meme.bottomText}
-                    />
-                    <input 
-                        type="text" 
-                        placeholder='Link to an img (optional)'
-                        onChange={handleText}
-                        name='link'
-                        value={meme.link}
-                    />
+                    <div className="meme--text--input">
+                        <input 
+                            type="text" 
+                            placeholder='Top text'
+                            onChange={handleText} 
+                            name='topText' 
+                            value={meme.topText}
+                            className='form--text--top'
+                        />
+                        <input 
+                            type="text" 
+                            placeholder='Bottom text'
+                            onChange={handleText} 
+                            name='bottomText' 
+                            value={meme.bottomText}
+                            className='form--text--bottom'
+                        />
+                    </div>
+                    <div className="meme--link">
+                        <input 
+                            type="text" 
+                            placeholder='Link to an img (optional)'
+                            onChange={handleText}
+                            name='link'
+                            value={meme.link}
+                            id='form--link'
+                        />
+                        <div className="form--checkbox">
+                            <input
+                                type="checkbox"
+                                id='linkAccept'
+                                name="checkbox"
+                                onChange={handleText}
+                                checked={meme.checkbox}
+                            />
+                            <label htmlFor="linkAccept">Use image from link</label>
+                        </div>
+                    </div>
                 </div>
                 <button onClick={getUrl} id='submit-form'>Get new meme!</button>
             </div>
             <div className="meme">
-                <img src={meme.link ? meme.link : meme.randomImg} className='meme--img' />
+                <img src={meme.link && meme.checkbox ? meme.link : meme.randomImg} className='meme--img' />
                 <h2 className="meme--text top">{meme.topText}</h2>
                 <h2 className="meme--text bottom">{meme.bottomText}</h2>
             </div>

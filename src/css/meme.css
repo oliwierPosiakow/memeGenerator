@@ -1,24 +1,51 @@
 .meme--wrapper {
   width: 100%;
+  padding: 0 3em;
 }
 .meme--wrapper .form {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 2em 2.5em;
+  padding: 2em 0;
 }
 .meme--wrapper .form .form--input--wrapper {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
 }
-.meme--wrapper .form .form--input--wrapper input {
+.meme--wrapper .form .form--input--wrapper input[type=text] {
   font-family: inherit;
   width: 40%;
+  min-width: 160px;
   border: 2px solid #D5D4D8;
   border-radius: 5px;
-  padding: 0.8em;
+  padding: 0.5em;
+}
+.meme--wrapper .form .form--input--wrapper .meme--text--input {
+  display: flex;
+  gap: 1em;
+  margin-bottom: 1em;
+  justify-content: space-between;
+}
+.meme--wrapper .form .form--input--wrapper .meme--link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+  justify-content: space-between;
+}
+.meme--wrapper .form .form--input--wrapper .meme--link .form--checkbox {
+  width: 40%;
+  min-width: 170px;
+  text-align: center;
+}
+.meme--wrapper .form .form--input--wrapper .meme--link .form--checkbox input[type=checkbox] {
+  width: 15px;
+  margin: 0;
+  margin-right: 0.5em;
+  accent-color: #D77126;
 }
 .meme--wrapper .form button {
   font-family: inherit;
@@ -50,9 +77,9 @@
   text-align: center;
   left: 50%;
   transform: translateX(-50%);
-  margin: 0.5em 0;
+  margin: 0.1em 0;
   padding: 0 0.3em;
-  font-size: 2em;
+  font-size: 2rem;
   text-transform: uppercase;
   color: white;
   letter-spacing: 1px;
@@ -63,4 +90,14 @@
 }
 .meme--wrapper .meme .top {
   top: 0;
+}
+
+@media (max-width: 530px) {
+  * {
+    font-size: 12px;
+  }
+  .meme--text--input {
+    flex-direction: column;
+    align-items: center;
+  }
 }/*# sourceMappingURL=meme.css.map */

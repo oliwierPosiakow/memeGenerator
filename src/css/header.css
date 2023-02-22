@@ -5,6 +5,7 @@ nav {
   background: linear-gradient(90deg, #D77126, #D5B339);
   padding: 1em 1.5em;
   color: white;
+  gap: 1em;
 }
 nav .nav--left {
   display: flex;
@@ -22,4 +23,5 @@ nav .nav--left h1 {
 }
 nav .nav--right {
   font-weight: 500;
+  min-width: 83px;
 }/*# sourceMappingURL=header.css.map */

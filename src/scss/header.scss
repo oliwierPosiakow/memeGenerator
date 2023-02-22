@@ -5,6 +5,7 @@ nav{
     background: linear-gradient(90deg, #D77126, #D5B339);
     padding: 1em 1.5em;
     color: white;
+    gap: 1em;
     .nav--left{
         display: flex;
         align-items: center;
@@ -21,5 +22,6 @@ nav{
     }
     .nav--right{
         font-weight: 500;
+        min-width: 83px;
     }
 }

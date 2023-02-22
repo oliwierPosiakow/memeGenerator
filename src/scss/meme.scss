@@ -1,23 +1,52 @@
 .meme--wrapper{
     width: 100%;
+    padding: 0 3em;
     .form{
-        
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        padding: 2em 2.5em;
+        padding: 2em 0;
         .form--input--wrapper{
             width: 100%;
             display: flex;
             justify-content: space-between;
-            input{
+            flex-direction: column;
+            input[type="text"]{
                 font-family: inherit;
                 width: 40%;
+                min-width: 160px;
                 border: 2px solid #D5D4D8;
                 border-radius: 5px;
-                padding: .8em;
+                padding: .5em;
             };
+            .meme--text--input{
+                display: flex;
+                gap: 1em;
+                margin-bottom: 1em;
+                justify-content: space-between;
+            }
+            .meme--link{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap:.5em;
+                justify-content: space-between;
+                
+                .form--checkbox{
+                    input[type="checkbox"]{
+                        width: 15px;
+                        margin: 0;
+                        margin-right: .5em;
+                        accent-color: #D77126;
+                    }
+                    width: 40%;
+                    min-width: 170px;
+                    text-align: center;
+                    
+                    
+                }
+            }
         }
         button{
             font-family: inherit;
@@ -49,9 +78,9 @@
             text-align: center;
             left: 50%;
             transform: translateX(-50%);
-            margin: .5em 0;
+            margin: .1em 0;
             padding: 0 .3em;
-            font-size: 2em;
+            font-size: 2rem;
             text-transform: uppercase;
             color: white;
             letter-spacing: 1px;
@@ -74,4 +103,15 @@
         }
     }
     
+}
+
+@media (max-width: 530px){
+    *{
+        font-size: 12px;
+    }
+
+    .meme--text--input{
+        flex-direction: column;
+        align-items: center;
+    }
 }
