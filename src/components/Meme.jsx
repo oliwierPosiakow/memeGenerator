@@ -1,10 +1,9 @@
 import '../css/meme.css'
-import memesData from '../memesData.js'
 import React from 'react'
 
 export default function Meme(){
     
-    const [allMemeImages, setAllMemeImages] = React.useState(memesData)
+    const [allMemeImages, setAllMemeImages] = React.useState([])
     const [meme, setMeme] = React.useState({
         topText: "",
         bottomText: "",
@@ -13,6 +12,14 @@ export default function Meme(){
         checkbox: false
     })
 
+    //getting memes form an API without infinite re-render loop 
+    React.useEffect(() => {
+        fetch('https://api.imgflip.com/get_memes')
+            .then(res => res.json())
+            .then(data => setAllMemeImages(data.data.memes))
+    }, [])
+
+    //handling text inputs if 'form'
     function handleText(event){
         const {value, name, type, checked} = event.target
         setMeme(prevMeme => {
@@ -23,8 +30,9 @@ export default function Meme(){
         })
     }
 
+    //getting url for a meme at button click
     function getUrl(){
-        const memesArr = allMemeImages.data.memes
+        const memesArr = allMemeImages
         const random = Math.floor(Math.random() * memesArr.length) 
         const url = memesArr[random].url
         setMeme(prevMeme => ({
@@ -32,9 +40,8 @@ export default function Meme(){
             randomImg: url
         }))
     }
-    
-    console.log(meme)
 
+    //Meme component
     return (
         <div className="meme--wrapper">
             <div className='form'>

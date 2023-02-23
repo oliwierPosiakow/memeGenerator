@@ -10,21 +10,20 @@
         .form--input--wrapper{
             width: 100%;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             flex-direction: column;
             input[type="text"]{
                 font-family: inherit;
-                width: 40%;
-                min-width: 160px;
                 border: 2px solid #D5D4D8;
                 border-radius: 5px;
                 padding: .5em;
+                width: 40%;
             };
             .meme--text--input{
                 display: flex;
                 gap: 1em;
                 margin-bottom: 1em;
-                justify-content: space-between;
+                justify-content: center;
             }
             .meme--link{
                 display: flex;
@@ -40,7 +39,7 @@
                         margin-right: .5em;
                         accent-color: #D77126;
                     }
-                    width: 40%;
+                    width: 100%;
                     min-width: 170px;
                     text-align: center;
                     
@@ -67,10 +66,8 @@
         position: relative;
         .meme--img{
             display: block;
-            margin: 0 auto;
+            width: 100%;
             margin-bottom: 2em;
-            max-width: 80%;
-            max-height: 60vh;
         }
         .meme--text{
             position: absolute;
@@ -80,7 +77,7 @@
             transform: translateX(-50%);
             margin: .1em 0;
             padding: 0 .3em;
-            font-size: 2rem;
+            font-size: 2em;
             text-transform: uppercase;
             color: white;
             letter-spacing: 1px;
