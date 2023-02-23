@@ -65,12 +65,14 @@
 }
 .meme--wrapper .meme .meme--img {
   display: block;
+  max-height: 60vh;
   width: 100%;
+  margin: 0 auto;
   margin-bottom: 2em;
 }
 .meme--wrapper .meme .meme--text {
   position: absolute;
-  width: 80%;
+  max-width: 80%;
   text-align: center;
   left: 50%;
   transform: translateX(-50%);

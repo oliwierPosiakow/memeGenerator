@@ -6,6 +6,7 @@ nav {
   padding: 1em 1.5em;
   color: white;
   gap: 1em;
+  border-radius: 5px 5px 0 0;
 }
 nav .nav--left {
   display: flex;
